@@ -1,9 +1,10 @@
 locals {
     subnets = cidrsubnets(var.cidr_block, var.subnets[*].new_bits...)
-    #subnet_with_cidr = [ -> Work needed here to iterate over local.subnets
-    #for subnet in var.subnets:
-    #  merge(subnet, {cidr = local.subnets[subnet]})
-    #]
+    subnets_with_cidr = [for i, n in var.subnets : {
+    name       = n.name
+    new_bits   = n.new_bits
+    cidr_block = n.name != null ? local.subnets[i] : tostring(null)
+  }]
 }
 
 resource "aws_vpc" "main" {
