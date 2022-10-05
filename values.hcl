@@ -1,5 +1,5 @@
 locals {
-    cidr_block = "10.0.0.0/16"
+    cidr_block = "10.0.0.0/24"
     tags = {
         "Name"     = "VPC Resource"
         "vpc_name" = "VPC Resource"
@@ -7,4 +7,42 @@ locals {
     }
     enable_dns_support  = true
     enable_dns_hostnames = true
+    subnets = [
+            {
+                name = "Public Subnet 1"
+                new_bits = 4
+            },
+            {
+                name = "Public Subnet 2"
+                new_bits = 4
+            },
+            {
+                name = "Public Subnet 3"
+                new_bits = 4
+            },
+            {
+                name = "Web Subnet 1"
+                new_bits = 4
+            },
+            {
+                name = "Web Subnet 2"
+                new_bits = 4
+            },
+            {
+                name = "Web Subnet 3"
+                new_bits = 4
+            },
+            {
+                name = "Data Subnet 1"
+                new_bits = 4
+            },
+            {
+                name = "Data Subnet 2"
+                new_bits = 4
+            },
+            {
+                name = "Data Subnet 3"
+                new_bits = 4
+            }
+        ]
 }

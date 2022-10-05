@@ -21,4 +21,5 @@ inputs = {
     enable_dns_support = local.values.locals.enable_dns_support
     enable_dns_hostnames = local.values.locals.enable_dns_hostnames
     tags = local.values.locals.tags
+    subnets = local.values.locals.subnets
 }
