@@ -12,7 +12,7 @@ variable "enable_dns_hostnames" {
   default       = false
   description = "A boolean flag to enable/disable DNS hostnames in the VPC"
 }
-variable "tag" {
+variable "tags" {
   type        = map(string)
   description = "VPC Tags"
 }
