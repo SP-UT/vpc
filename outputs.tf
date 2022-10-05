@@ -8,4 +8,5 @@ output "vpc_id" {
 }
 output "subnets" {
     value = local.subnets_with_cidr
+    description = "CIDR information associated with each subnet."
 }

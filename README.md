@@ -35,7 +35,7 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_subnets"></a> [subnets](#output\_subnets) | n/a |
+| <a name="output_subnets"></a> [subnets](#output\_subnets) | CIDR information associated with each subnet. |
 | <a name="output_vpc_arn"></a> [vpc\_arn](#output\_vpc\_arn) | Amazon Resource Name (ARN) of VPC |
 | <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | The ID of the VPC |
 <!-- END_TF_DOCS -->
