@@ -15,3 +15,10 @@ terraform {
 }
 EOF
 }
+
+inputs = {
+    cidr_block = local.values.locals.cidr_block
+    enable_dns_support = local.values.locals.enable_dns_support
+    enable_dns_hostnames = local.values.locals.enable_dns_hostnames
+    tag = local.values.locals.tag
+}
