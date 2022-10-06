@@ -6,6 +6,10 @@ locals {
     cidr_block = n.name != null ? local.subnets[i] : tostring(null)
   }]
   subnt_map = { for s in local.subnets_with_cidr : s.name => { az = s.az, cidr_block = s.cidr_block } }
+  subnet_ids = {
+    for val in aws_subnet.main : val.tags.Name => val.id
+    if !can(regex("^Public Subnet [[:digit:]]", val.tags.Name))
+  }
 }
 
 resource "aws_vpc" "main" {

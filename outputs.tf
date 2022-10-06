@@ -6,6 +6,9 @@ output "vpc_id" {
   value       = aws_vpc.main.id
   description = "The ID of the VPC"
 }
+output "subnet_ids" {
+    value = local.subnet_ids
+}
 output "subnets" {
   value = {
     for val in aws_subnet.main :
