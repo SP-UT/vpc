@@ -10,3 +10,7 @@ output "subnets" {
   value       = aws_subnet.main
   description = "CIDR information associated with each subnet."
 }
+output "igw" {
+  value       = aws_internet_gateway.gw
+  description = "AWS Internet Gateway"
+}
