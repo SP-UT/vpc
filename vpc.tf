@@ -22,3 +22,8 @@ resource "aws_subnet" "main" {
   availability_zone = each.value.az
   tags              = merge({ "Name" = each.key }, var.tags)
 }
+
+resource "aws_internet_gateway" "gw" {
+  vpc_id = aws_vpc.main.id
+  tags   = merge({ "Name" = join("-", [var.vpc_name, "IGW"]) }, var.tags)
+}

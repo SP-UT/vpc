@@ -19,6 +19,7 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [aws_internet_gateway.gw](https://registry.terraform.io/providers/hashicorp/aws/4.33.0/docs/resources/internet_gateway) | resource |
 | [aws_subnet.main](https://registry.terraform.io/providers/hashicorp/aws/4.33.0/docs/resources/subnet) | resource |
 | [aws_vpc.main](https://registry.terraform.io/providers/hashicorp/aws/4.33.0/docs/resources/vpc) | resource |
 
