@@ -19,7 +19,7 @@ resource "aws_subnet" "main" {
   for_each          = local.subnt_map
   vpc_id            = aws_vpc.main.id
   cidr_block        = each.value.cidr_block
-  availability_zone = each.value.az
+  availability_zone = join("", [var.region, each.value.az])
   tags              = merge({ "Name" = each.key }, var.tags)
 }
 

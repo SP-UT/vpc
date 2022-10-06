@@ -1,5 +1,6 @@
 locals {
     cidr_block = "10.0.0.0/24"
+    region = "us-east-1"
     vpc_name = "IaC VPC"
     tags = {
         "vpc_name" = "VPC Resource"
@@ -11,47 +12,47 @@ locals {
             {
                 name = "Public Subnet 1"
                 new_bits = 4
-                az = "us-east-1a"
+                az = "a"
             },
             {
                 name = "Public Subnet 2"
                 new_bits = 4
-                az = "us-east-1b"
+                az = "b"
             },
             {
                 name = "Public Subnet 3"
                 new_bits = 4
-                az = "us-east-1c"
+                az = "c"
             },
             {
                 name = "Web Subnet 1"
                 new_bits = 4
-                az = "us-east-1a"
+                az = "a"
             },
             {
                 name = "Web Subnet 2"
                 new_bits = 4
-                az = "us-east-1b"
+                az = "b"
             },
             {
                 name = "Web Subnet 3"
                 new_bits = 4
-                az = "us-east-1c"
+                az = "c"
             },
             {
                 name = "Data Subnet 1"
                 new_bits = 4
-                az = "us-east-1a"
+                az = "a"
             },
             {
                 name = "Data Subnet 2"
                 new_bits = 4
-                az = "us-east-1b"
+                az = "b"
             },
             {
                 name = "Data Subnet 3"
                 new_bits = 4
-                az = "us-east-1c"
+                az = "c"
             }
         ]
 }

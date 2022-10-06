@@ -2,6 +2,10 @@ variable "cidr_block" {
   type        = string
   description = "VPC CIDR block"
 }
+variable "region" {
+  type        = string
+  description = "AWS region to deploy the resources."
+}
 variable "vpc_name" {
   type        = string
   description = "VPC Name"
@@ -26,5 +30,5 @@ variable "subnets" {
     new_bits = number
     az       = string
   }))
-  description = "Subnet information necessary to create all the subnets. Please check [cidrsubnets](https://www.terraform.io/language/functions/cidrsubnets) for more info on `new_bits`"
+  description = "Subnet information necessary to create all the subnets. Please check [cidrsubnets](https://www.terraform.io/language/functions/cidrsubnets) for more info on `new_bits`. The `region` variable is used to associate the desired AZ."
 }
