@@ -30,5 +30,5 @@ variable "subnets" {
     new_bits = number
     az       = string
   }))
-  description = "Subnet information necessary to create all the subnets. Please check [cidrsubnets](https://www.terraform.io/language/functions/cidrsubnets) for more info on `new_bits`. The `region` variable is used to associate the desired AZ. Example : `join(\"\",[\"us-east-1\", \"a\"])`"
+  description = "Subnet information necessary to create all the subnets. Please check [cidrsubnets](https://www.terraform.io/language/functions/cidrsubnets) for more info on `new_bits`. The `region` variable is used to associate the desired AZ. Usage : `join(\"\",[\"us-east-1\", \"a\"])`. Example: [values.hcl](https://github.com/SP-UT/vpc/blob/main/values.hcl#L15)"
 }
