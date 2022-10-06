@@ -26,5 +26,5 @@ variable "subnets" {
     new_bits = number
     az       = string
   }))
-  description = "Subnet information necessary to create all the subnets. Please check [cidr_subnets](https://www.terraform.io/language/functions/cidrsubnets) for more info on `new_bits`"
+  description = "Subnet information necessary to create all the subnets. Please check [cidrsubnets](https://www.terraform.io/language/functions/cidrsubnets) for more info on `new_bits`"
 }
