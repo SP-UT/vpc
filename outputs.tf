@@ -7,10 +7,16 @@ output "vpc_id" {
   description = "The ID of the VPC"
 }
 output "subnets" {
-  value       = aws_subnet.main
+  value       = {
+    for val in aws_subnet.main:
+    val.tags.Name => val.cidr_block
+  }
   description = "CIDR information associated with each subnet."
 }
+
 output "igw" {
-  value       = aws_internet_gateway.gw
+  value       = {
+    join("-", [var.vpc_name, "IGW"]) = aws_internet_gateway.gw.id 
+  }
   description = "AWS Internet Gateway"
 }
