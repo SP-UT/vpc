@@ -30,7 +30,7 @@ No modules.
 | <a name="input_cidr_block"></a> [cidr\_block](#input\_cidr\_block) | VPC CIDR block | `string` | n/a | yes |
 | <a name="input_enable_dns_hostnames"></a> [enable\_dns\_hostnames](#input\_enable\_dns\_hostnames) | A boolean flag to enable/disable DNS hostnames in the VPC | `bool` | `false` | no |
 | <a name="input_enable_dns_support"></a> [enable\_dns\_support](#input\_enable\_dns\_support) | A boolean flag to enable/disable DNS support in the VPC. | `bool` | `false` | no |
-| <a name="input_subnets"></a> [subnets](#input\_subnets) | Subnet information necessary to create all the subnets. | <pre>list(object({<br>    name     = string<br>    new_bits = number<br>    az       = string<br>  }))</pre> | n/a | yes |
+| <a name="input_subnets"></a> [subnets](#input\_subnets) | Subnet information necessary to create all the subnets. Please check [cidr\_subnets](https://www.terraform.io/language/functions/cidrsubnets) for more info on `new_bits` | <pre>list(object({<br>    name     = string<br>    new_bits = number<br>    az       = string<br>  }))</pre> | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | VPC Tags | `map(string)` | n/a | yes |
 | <a name="input_vpc_name"></a> [vpc\_name](#input\_vpc\_name) | VPC Name | `string` | n/a | yes |
 
