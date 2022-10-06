@@ -18,6 +18,7 @@ EOF
 
 inputs = {
     cidr_block = local.values.locals.cidr_block
+    vpc_name = local.values.locals.vpc_name
     enable_dns_support = local.values.locals.enable_dns_support
     enable_dns_hostnames = local.values.locals.enable_dns_hostnames
     tags = local.values.locals.tags

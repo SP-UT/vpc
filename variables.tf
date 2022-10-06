@@ -2,6 +2,10 @@ variable "cidr_block" {
   type        = string
   description = "VPC CIDR block"
 }
+variable "vpc_name" {
+  type        = string
+  description = "VPC Name"
+}
 variable "enable_dns_support" {
   type        = bool
   default     = false
@@ -20,6 +24,7 @@ variable "subnets" {
   type = list(object({
     name     = string
     new_bits = number
+    az       = string
   }))
-  description = "Subnet information for tagging purposes and newbits to pass to cidr_subnets function"
+  description = "Subnet information necessary to create all the subnets."
 }

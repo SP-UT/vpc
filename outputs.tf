@@ -7,6 +7,6 @@ output "vpc_id" {
   description = "The ID of the VPC"
 }
 output "subnets" {
-  value       = local.subnets_with_cidr
+  value       = aws_subnet.main
   description = "CIDR information associated with each subnet."
 }
