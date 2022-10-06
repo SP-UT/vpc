@@ -1,6 +1,6 @@
 locals {
-    subnets = cidrsubnets(var.cidr_block, var.subnets[*].new_bits...)
-    subnets_with_cidr = [for i, n in var.subnets : {
+  subnets = cidrsubnets(var.cidr_block, var.subnets[*].new_bits...)
+  subnets_with_cidr = [for i, n in var.subnets : {
     name       = n.name
     cidr_block = n.name != null ? local.subnets[i] : tostring(null)
   }]

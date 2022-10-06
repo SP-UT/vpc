@@ -17,7 +17,7 @@ variable "tags" {
   description = "VPC Tags"
 }
 variable "subnets" {
-  type        = list(object({
+  type = list(object({
     name     = string
     new_bits = number
   }))
