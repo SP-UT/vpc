@@ -42,7 +42,7 @@ No modules.
 |------|-------------|
 | <a name="output_eip"></a> [eip](#output\_eip) | Elastic IP address information |
 | <a name="output_igw"></a> [igw](#output\_igw) | AWS Internet Gateway |
-| <a name="output_private_subnet_ids"></a> [private\_subnet\_ids](#output\_private\_subnet\_ids) | n/a |
+| <a name="output_private_subnet_ids"></a> [private\_subnet\_ids](#output\_private\_subnet\_ids) | Map of Private Subnet and associated subnet id created.`private_subnet_ids = {"(Web | Data) Subnet 1" = { "subnet_id" = "subnet-xxxxxxx"}` |
 | <a name="output_public_subnet_ids"></a> [public\_subnet\_ids](#output\_public\_subnet\_ids) | Map of Public Subnet and associated subnet id created.`public_subnet_ids = {"Public Subnet 1" = { "subnet_id" = "subnet-xxxxxxx"}` |
 | <a name="output_subnets"></a> [subnets](#output\_subnets) | CIDR information associated with each subnet. |
 | <a name="output_vpc_arn"></a> [vpc\_arn](#output\_vpc\_arn) | Amazon Resource Name (ARN) of VPC |
