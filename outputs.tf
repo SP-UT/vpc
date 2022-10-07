@@ -6,8 +6,11 @@ output "vpc_id" {
   value       = aws_vpc.main.id
   description = "The ID of the VPC"
 }
-output "subnet_ids" {
-    value = local.subnet_ids
+output "private_subnet_ids" {
+    value = local.private_subnet_ids
+}
+output "public_subnet_ids" {
+    value = local.public_subnet_ids
 }
 output "subnets" {
   value = {
@@ -22,4 +25,12 @@ output "igw" {
     join("-", [var.vpc_name, "IGW"]) = aws_internet_gateway.gw.id
   }
   description = "AWS Internet Gateway"
+}
+
+output "eip" {
+  value = [
+    for val in aws_eip.eip :
+    val.public_ip
+  ]
+  description = "Elastic IP address information"
 }
