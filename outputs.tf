@@ -11,6 +11,7 @@ output "private_subnet_ids" {
 }
 output "public_subnet_ids" {
   value = local.public_subnet_ids
+  description = "Map of Public Subnet and associated subnet id created.`public_subnet_ids = {\"Public Subnet 1\" = { \"subnet_id\" = \"subnet-xxxxxxx\"}`"
 }
 output "subnets" {
   value = {
