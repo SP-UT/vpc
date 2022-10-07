@@ -7,10 +7,10 @@ output "vpc_id" {
   description = "The ID of the VPC"
 }
 output "private_subnet_ids" {
-    value = local.private_subnet_ids
+  value = local.private_subnet_ids
 }
 output "public_subnet_ids" {
-    value = local.public_subnet_ids
+  value = local.public_subnet_ids
 }
 output "subnets" {
   value = {
