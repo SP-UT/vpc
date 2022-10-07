@@ -8,7 +8,7 @@ output "vpc_id" {
 }
 output "private_subnet_ids" {
   value = local.private_subnet_ids
-  description = "Map of Private Subnet and associated subnet id created.`private_subnet_ids = {\"(Web | Data) Subnet 1\" = { \"subnet_id\" = \"subnet-xxxxxxx\"}`"
+  description = "Map of Private Subnet and associated subnet id created.`private_subnet_ids = {\"Web or Data Subnet 1\" = { \"subnet_id\" = \"subnet-xxxxxxx\"}`"
 }
 output "public_subnet_ids" {
   value = local.public_subnet_ids
