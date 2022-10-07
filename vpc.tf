@@ -18,9 +18,6 @@ locals {
     }
     if can(regex("^Public Subnet [[:digit:]]", val.tags.Name))
   }
-  eips           = [for val in aws_eip.eip : val.public_ip]
-  subnet_pub_ids = [for k, v in local.public_subnet_ids : v.subnet_id]
-  eip_map        = zipmap(local.subnet_pub_ids, local.eips)
 }
 
 resource "aws_vpc" "main" {
