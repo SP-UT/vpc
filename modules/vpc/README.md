@@ -1,20 +1,4 @@
 <!-- BEGIN_TF_DOCS -->
-### Execute Terragrunt  
-#### Setup Provider
-```
-export AWS_ACCESS_KEY_ID=[YOUR_ACCESS_KEY_HERE]
-export AWS_SECRET_ACCESS_KEY=[YOUR_SECRET_ACCESS_KEY_HERE]
-export AWS_REGION=[YOUR_REGION_HERE]
-```
-#### Setup Terragrunt 
-```
-terragrunt init
-```
-#### Apply Terragrunt
-```
-terragrunt apply -target=module.vpc -target=module.igw -target=module.eip
-terragrunt apply -target=module.nat
-```
   ## Requirements
 
 No requirements.
