@@ -24,7 +24,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_eip_map"></a> [eip\_map](#input\_eip\_map) | Elastic IP address information with subnet mapping | `map` | n/a | yes |
+| <a name="input_eip_map"></a> [eip\_map](#input\_eip\_map) | Elastic IP address information with subnet mapping | `map(any)` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | VPC Tags | `map(string)` | n/a | yes |
 
 ## Outputs
