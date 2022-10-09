@@ -1,5 +1,5 @@
 <!-- BEGIN_TF_DOCS -->
-## Module Documentation
+# Module Documentation
   ## Requirements
 
 No requirements.

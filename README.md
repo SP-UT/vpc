@@ -16,7 +16,7 @@ terragrunt apply -target=module.nat
 ```
 
 <!-- BEGIN_TF_DOCS -->
-## Module Documentation
+# Module Documentation
   ## Requirements
 
 | Name | Version |
