@@ -31,5 +31,5 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_nat_gw"></a> [nat\_gw](#output\_nat\_gw) | n/a |
+| <a name="output_nat_gw"></a> [nat\_gw](#output\_nat\_gw) | NAT Gateway information with the Subnet and EIP allocation ID. |
 <!-- END_TF_DOCS -->

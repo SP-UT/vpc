@@ -27,5 +27,6 @@ output "eip_map" {
   description = "Elastic IP address information with subnet mapping"
 }
 output "nat_gw" {
-  value = module.nat.nat_gw
+  value       = module.nat.nat_gw
+  description = "NAT Gateway information with the Subnet and EIP allocation ID."
 }

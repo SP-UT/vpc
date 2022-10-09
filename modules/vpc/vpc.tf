@@ -34,3 +34,14 @@ resource "aws_subnet" "main" {
   availability_zone = join("", [var.region, each.value.az])
   tags              = merge({ "Name" = each.key }, var.tags)
 }
+
+resource "aws_route_table" "public" {
+  vpc_id = aws_vpc.main.id
+  tags   = merge({ "Name" = "Public Subnets Route Table" }, var.tags)
+}
+
+resource "aws_route_table" "private" {
+  for_each = local.private_subnet_ids
+  vpc_id   = aws_vpc.main.id
+  tags     = merge({ "Name" = join(" - ", [each.key, "Route Table"]) }, var.tags)
+}

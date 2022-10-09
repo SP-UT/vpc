@@ -3,6 +3,6 @@ variable "tags" {
   description = "VPC Tags"
 }
 variable "eip_map" {
-  type        = map
+  type        = map(any)
   description = "Elastic IP address information with subnet mapping"
 }
