@@ -1,4 +1,4 @@
-#### Loop to create NAT Gateway (Cannot do in single module / terraform call)
+### Loop to create NAT Gateway (Cannot do in single module / terraform call)
 
 ```
 locals{
@@ -46,7 +46,7 @@ ERRO[0001] 1 error occurred:
 
 ```
 
-#### Route Table association for Private Subnets needs to be a separate module (Reason Why)
+### Route Table association for Private Subnets needs to be a separate module (Reason Why)
 
 ```
 locals {
