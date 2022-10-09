@@ -18,6 +18,9 @@ locals {
     }
     if can(regex("^Public Subnet [[:digit:]]", val.tags.Name))
   }
+  routes                = [for val in aws_route_table.private : val.id]
+  subnet_priv_ids       = [for k, v in local.private_subnet_ids : v.subnet_id]
+  priv_subnet_route_map = zipmap(local.subnet_priv_ids, local.routes)
 }
 
 resource "aws_vpc" "main" {
@@ -43,5 +46,17 @@ resource "aws_route_table" "public" {
 resource "aws_route_table" "private" {
   for_each = local.private_subnet_ids
   vpc_id   = aws_vpc.main.id
-  tags     = merge({ "Name" = join(" - ", [each.key, "Route Table"]) }, var.tags)
+  tags     = merge({ "Name" = each.key }, var.tags)
+}
+
+resource "aws_route_table_association" "public_subnets" {
+  for_each       = local.public_subnet_ids
+  subnet_id      = each.value.subnet_id
+  route_table_id = aws_route_table.public.id
+}
+
+resource "aws_route_table_association" "private_subnets" {
+  for_each       = local.priv_subnet_route_map
+  subnet_id      = each.key
+  route_table_id = each.value
 }
