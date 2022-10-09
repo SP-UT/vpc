@@ -18,6 +18,14 @@ output "subnets" {
   value       = module.vpc.subnets
   description = "CIDR information associated with each subnet."
 }
+output "public_route_table" {
+  value       = module.vpc.public_route_table
+  description = "Public Route Table ID."
+}
+output "private_route_tables" {
+  value       = module.vpc.private_route_tables
+  description = "Private Route Table IDs."
+}
 output "eip" {
   value       = module.eip.eip
   description = "Elastic IP address information"
