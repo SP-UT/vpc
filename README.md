@@ -1,4 +1,4 @@
-### Execute Terragrunt  
+# Execute Terragrunt  
 #### Setup Provider
 ```
 export AWS_ACCESS_KEY_ID=[YOUR_ACCESS_KEY_HERE]
