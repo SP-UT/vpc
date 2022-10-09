@@ -47,6 +47,23 @@ ERRO[0001] 1 error occurred:
 ```
 
 #### Route Table association for Private Subnets needs to be a separate module (Reason Why)
+
+```
+locals {
+    routes                = [for val in aws_route_table.private : val.id]
+  subnet_priv_ids       = [for k, v in local.private_subnet_ids : v.subnet_id]
+  priv_subnet_route_map = zipmap(local.subnet_priv_ids, local.routes)
+
+}
+resource "aws_route_table_association" "private_subnets" {
+  for_each       = local.priv_subnet_route_map
+  subnet_id      = each.key
+  route_table_id = each.value
+}
+
+```
+#### Error at `terragrunt apply`
+
 ```
 │ Error: Invalid for_each argument
 │ 
