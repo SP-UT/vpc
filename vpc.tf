@@ -22,3 +22,10 @@ module "eip" {
   depends_on        = [module.igw]
   tags              = var.tags
 }
+
+module "nat" {
+  source     = "./modules/nat/"
+  eip_map    = module.eip.eip_map
+  depends_on = [module.igw]
+  tags       = var.tags
+}

@@ -15,6 +15,7 @@ No providers.
 |------|--------|---------|
 | <a name="module_eip"></a> [eip](#module\_eip) | ./modules/eip/ | n/a |
 | <a name="module_igw"></a> [igw](#module\_igw) | ./modules/igw/ | n/a |
+| <a name="module_nat"></a> [nat](#module\_nat) | ./modules/nat/ | n/a |
 | <a name="module_vpc"></a> [vpc](#module\_vpc) | ./modules/vpc/ | n/a |
 
 ## Resources
@@ -38,7 +39,8 @@ No resources.
 | Name | Description |
 |------|-------------|
 | <a name="output_eip"></a> [eip](#output\_eip) | Elastic IP address information |
-| <a name="output_eip_map"></a> [eip\_map](#output\_eip\_map) | Elastic IP address information |
+| <a name="output_eip_map"></a> [eip\_map](#output\_eip\_map) | Elastic IP address information with subnet mapping |
+| <a name="output_nat_gw"></a> [nat\_gw](#output\_nat\_gw) | n/a |
 | <a name="output_private_subnet_ids"></a> [private\_subnet\_ids](#output\_private\_subnet\_ids) | Map of Private Subnet and associated subnet id created.`private_subnet_ids = {"Web or Data Subnet 1" = { "subnet_id" = "subnet-xxxxxxx"}` |
 | <a name="output_public_subnet_ids"></a> [public\_subnet\_ids](#output\_public\_subnet\_ids) | Map of Public Subnet and associated subnet id created.`public_subnet_ids = {"Public Subnet 1" = { "subnet_id" = "subnet-xxxxxxx"}` |
 | <a name="output_subnets"></a> [subnets](#output\_subnets) | CIDR information associated with each subnet. |

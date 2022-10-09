@@ -1,5 +1,5 @@
 locals {
-  eips           = [for val in aws_eip.eip : val.public_ip]
+  eips           = [for val in aws_eip.eip : val.id]
   subnet_pub_ids = [for k, v in var.public_subnet_ids : v.subnet_id]
   eip_map        = zipmap(local.subnet_pub_ids, local.eips)
 

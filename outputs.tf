@@ -24,5 +24,8 @@ output "eip" {
 }
 output "eip_map" {
   value       = module.eip.eip_map
-  description = "Elastic IP address information"
+  description = "Elastic IP address information with subnet mapping"
+}
+output "nat_gw" {
+  value = module.nat.nat_gw
 }

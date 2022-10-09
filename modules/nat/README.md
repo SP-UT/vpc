@@ -17,19 +17,18 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [aws_eip.eip](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eip) | resource |
+| [aws_nat_gateway.nat_gw](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/nat_gateway) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_public_subnet_ids"></a> [public\_subnet\_ids](#input\_public\_subnet\_ids) | VPC Public Subnet mapped to corresponding CIDRs. | `map(map(string))` | n/a | yes |
+| <a name="input_eip_map"></a> [eip\_map](#input\_eip\_map) | Elastic IP address information with subnet mapping | `map` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | VPC Tags | `map(string)` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_eip"></a> [eip](#output\_eip) | Elastic IP address information |
-| <a name="output_eip_map"></a> [eip\_map](#output\_eip\_map) | Elastic IP and corresponding subnet mapping |
+| <a name="output_nat_gw"></a> [nat\_gw](#output\_nat\_gw) | n/a |
 <!-- END_TF_DOCS -->
