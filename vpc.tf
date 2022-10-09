@@ -19,5 +19,6 @@ module "igw" {
 module "eip" {
   source            = "./modules/eip/"
   public_subnet_ids = module.vpc.public_subnet_ids
+  depends_on        = [module.igw]
   tags              = var.tags
 }
