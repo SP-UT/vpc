@@ -2,7 +2,6 @@ formatter: "markdown table" # this is required
 
 version: ""
 
-header-from: main.tf
 footer-from: ""
 
 recursive:
@@ -23,6 +22,7 @@ output:
   mode: inject
   template: |-
     <!-- BEGIN_TF_DOCS -->
+    ## Module Documentation
       {{ .Content }}
     <!-- END_TF_DOCS -->
 
