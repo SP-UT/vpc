@@ -14,6 +14,18 @@ terragrunt init
 terragrunt apply -target=module.vpc -target=module.igw -target=module.eip
 terragrunt apply -target=module.nat
 ```
+# Terraform Docs  
+## Install Terraform Docs
+
+```
+https://terraform-docs.io/user-guide/installation/
+```
+
+## Generate Terraform Docs
+
+```
+terraform-docs .
+```
 
 <!-- BEGIN_TF_DOCS -->
 # Module Documentation
