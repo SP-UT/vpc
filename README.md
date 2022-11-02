@@ -14,6 +14,9 @@ terragrunt init
 terragrunt apply -target=module.vpc -target=module.igw -target=module.eip
 terragrunt apply -target=module.nat -target=module.routes
 ```
+
+### VPC Information
+This module creates a standard VPC with 3 subnets in each AZ.
 # Terraform Docs  
 ## Install Terraform Docs
 
