@@ -1,5 +1,5 @@
 module "vpc" {
-  source               = "./modules/vpc/"
+  source               = "./modules/vpc"
   cidr_block           = var.cidr_block
   region               = var.region
   vpc_name             = var.vpc_name
@@ -10,22 +10,32 @@ module "vpc" {
 }
 
 module "igw" {
-  source   = "./modules/igw/"
+  source   = "./modules/igw"
   vpc_name = var.vpc_name
   vpc_id   = module.vpc.vpc_id
   tags     = var.tags
 }
 
 module "eip" {
-  source            = "./modules/eip/"
+  source            = "./modules/eip"
   public_subnet_ids = module.vpc.public_subnet_ids
   depends_on        = [module.igw]
   tags              = var.tags
 }
 
 module "nat" {
-  source     = "./modules/nat/"
+  source     = "./modules/nat"
   eip_map    = module.eip.eip_map
   depends_on = [module.igw]
   tags       = var.tags
+}
+
+module "routes" {
+  source             = "./modules/routes"
+  vpc_id             = module.vpc.vpc_id
+  tags               = var.tags
+  private_subnet_ids = module.vpc.private_subnet_ids
+  public_subnet_ids  = module.vpc.public_subnet_ids
+  igw                = module.igw.igw[join("-", [var.vpc_name, "IGW"])]
+  depends_on         = [module.igw, module.eip, module.nat]
 }

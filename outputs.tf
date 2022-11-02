@@ -19,12 +19,16 @@ output "subnets" {
   description = "CIDR information associated with each subnet."
 }
 output "public_route_table" {
-  value       = module.vpc.public_route_table
+  value       = module.routes.public_route_table
   description = "Public Route Table ID."
 }
 output "private_route_tables" {
-  value       = module.vpc.private_route_tables
+  value       = module.routes.private_route_tables
   description = "Private Route Table IDs."
+}
+output "priv_subnet_route_map" {
+  value       = module.routes.priv_subnet_route_map
+  description = "Private Route Map."
 }
 output "eip" {
   value       = module.eip.eip
@@ -37,4 +41,8 @@ output "eip_map" {
 output "nat_gw" {
   value       = module.nat.nat_gw
   description = "NAT Gateway information with the Subnet and EIP allocation ID."
+}
+output "igw" {
+  value       = module.igw.igw
+  description = "Internet Gateway Information."
 }

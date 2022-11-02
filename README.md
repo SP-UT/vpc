@@ -12,7 +12,7 @@ terragrunt init
 ## Apply Terragrunt
 ```
 terragrunt apply -target=module.vpc -target=module.igw -target=module.eip
-terragrunt apply -target=module.nat
+terragrunt apply -target=module.nat -target=module.routes
 ```
 # Terraform Docs  
 ## Install Terraform Docs
