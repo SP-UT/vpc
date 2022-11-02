@@ -16,14 +16,17 @@ locals {
     for k, val in local.private_subnet_ids : val.subnet_id
     if can(regex("[[:alpha:]]+ [[:alpha:]]+ 1$", k))
   ]
+  route_az1_map = { tostring(local.public_subnet_ids["Public Subnet 1"]["subnet_id"]) = local.az_1_private_subnets }
   az_2_private_subnets = [
     for k, val in local.private_subnet_ids : val.subnet_id
     if can(regex("[[:alpha:]]+ [[:alpha:]]+ 2$", k))
   ]
+  route_az2_map = { tostring(local.public_subnet_ids["Public Subnet 2"]["subnet_id"]) = local.az_2_private_subnets }
   az_3_private_subnets = [
     for k, val in local.private_subnet_ids : val.subnet_id
     if can(regex("[[:alpha:]]+ [[:alpha:]]+ 3$", k))
   ]
+  route_az3_map = { tostring(local.public_subnet_ids["Public Subnet 3"]["subnet_id"]) = local.az_3_private_subnets }
   public_subnet_ids = {
     for val in aws_subnet.main : val.tags.Name => {
       subnet_id = val.id

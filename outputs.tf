@@ -47,3 +47,12 @@ output "igw" {
   value       = module.igw.igw
   description = "Internet Gateway Information."
 }
+output "route_az1_map" {
+  value = module.vpc.route_az1_map
+}
+output "route_az2_map" {
+  value = module.vpc.route_az2_map
+}
+output "route_az3_map" {
+  value = module.vpc.route_az3_map
+}
