@@ -37,7 +37,13 @@ No modules.
 
 | Name | Description |
 |------|-------------|
+| <a name="output_az_1_private_subnets"></a> [az\_1\_private\_subnets](#output\_az\_1\_private\_subnets) | Private Subnets in Availability Zone 1(Required by routes module) |
+| <a name="output_az_2_private_subnets"></a> [az\_2\_private\_subnets](#output\_az\_2\_private\_subnets) | Private Subnets in Availability Zone 2(Required by routes module) |
+| <a name="output_az_3_private_subnets"></a> [az\_3\_private\_subnets](#output\_az\_3\_private\_subnets) | Private Subnets in Availability Zone 3(Required by routes module) |
 | <a name="output_private_subnet_ids"></a> [private\_subnet\_ids](#output\_private\_subnet\_ids) | Map of Private Subnet and associated subnet id created.`private_subnet_ids = {"Web or Data Subnet 1" = { "subnet_id" = "subnet-xxxxxxx"}` |
+| <a name="output_public_subnet_1"></a> [public\_subnet\_1](#output\_public\_subnet\_1) | Public Subnet in Availability Zone 1(Required by routes module) |
+| <a name="output_public_subnet_2"></a> [public\_subnet\_2](#output\_public\_subnet\_2) | Public Subnet in Availability Zone 2(Required by routes module) |
+| <a name="output_public_subnet_3"></a> [public\_subnet\_3](#output\_public\_subnet\_3) | Public Subnet in Availability Zone 3(Required by routes module) |
 | <a name="output_public_subnet_ids"></a> [public\_subnet\_ids](#output\_public\_subnet\_ids) | Map of Public Subnet and associated subnet id created.`public_subnet_ids = {"Public Subnet 1" = { "subnet_id" = "subnet-xxxxxxx"}` |
 | <a name="output_subnets"></a> [subnets](#output\_subnets) | CIDR information associated with each subnet. |
 | <a name="output_vpc_arn"></a> [vpc\_arn](#output\_vpc\_arn) | Amazon Resource Name (ARN) of VPC |

@@ -47,3 +47,7 @@ output "igw" {
   value       = module.igw.igw
   description = "Internet Gateway Information."
 }
+output "public_subnet_1" {
+  value       = module.vpc.public_subnet_1
+  description = "Public Subnet in Availability Zone 1"
+}

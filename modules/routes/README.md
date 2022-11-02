@@ -38,7 +38,7 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_priv_subnet_route_map"></a> [priv\_subnet\_route\_map](#output\_priv\_subnet\_route\_map) | n/a |
 | <a name="output_private_route_tables"></a> [private\_route\_tables](#output\_private\_route\_tables) | Private Route Table IDs. |
+| <a name="output_public_route"></a> [public\_route](#output\_public\_route) | n/a |
 | <a name="output_public_route_table"></a> [public\_route\_table](#output\_public\_route\_table) | Public Route Table ID. |
 <!-- END_TF_DOCS -->

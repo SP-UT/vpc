@@ -75,7 +75,9 @@ No resources.
 | <a name="output_nat_gw"></a> [nat\_gw](#output\_nat\_gw) | NAT Gateway information with the Subnet and EIP allocation ID. |
 | <a name="output_private_route_tables"></a> [private\_route\_tables](#output\_private\_route\_tables) | Private Route Table IDs. |
 | <a name="output_private_subnet_ids"></a> [private\_subnet\_ids](#output\_private\_subnet\_ids) | Map of Private Subnet and associated subnet id created.`private_subnet_ids = {"Web or Data Subnet 1" = { "subnet_id" = "subnet-xxxxxxx"}` |
+| <a name="output_public_route"></a> [public\_route](#output\_public\_route) | Public Route ID - Traffic to Internet Gateway |
 | <a name="output_public_route_table"></a> [public\_route\_table](#output\_public\_route\_table) | Public Route Table ID. |
+| <a name="output_public_subnet_1"></a> [public\_subnet\_1](#output\_public\_subnet\_1) | Public Subnet in Availability Zone 1 |
 | <a name="output_public_subnet_ids"></a> [public\_subnet\_ids](#output\_public\_subnet\_ids) | Map of Public Subnet and associated subnet id created.`public_subnet_ids = {"Public Subnet 1" = { "subnet_id" = "subnet-xxxxxxx"}` |
 | <a name="output_subnets"></a> [subnets](#output\_subnets) | CIDR information associated with each subnet. |
 | <a name="output_vpc_arn"></a> [vpc\_arn](#output\_vpc\_arn) | Amazon Resource Name (ARN) of VPC |

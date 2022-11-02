@@ -12,6 +12,18 @@ locals {
     }
     if !can(regex("^Public Subnet [[:digit:]]", val.tags.Name))
   }
+  az_1_private_subnets = [
+    for k, val in local.private_subnet_ids : val.subnet_id
+    if can(regex("[[:alpha:]]+ [[:alpha:]]+ 1$", k))
+  ]
+  az_2_private_subnets = [
+    for k, val in local.private_subnet_ids : val.subnet_id
+    if can(regex("[[:alpha:]]+ [[:alpha:]]+ 2$", k))
+  ]
+  az_3_private_subnets = [
+    for k, val in local.private_subnet_ids : val.subnet_id
+    if can(regex("[[:alpha:]]+ [[:alpha:]]+ 3$", k))
+  ]
   public_subnet_ids = {
     for val in aws_subnet.main : val.tags.Name => {
       subnet_id = val.id
