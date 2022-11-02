@@ -20,6 +20,12 @@ resource "aws_route_table_association" "public_subnets" {
   route_table_id = aws_route_table.public.id
 }
 
+resource "aws_route" "public_routes" {
+  route_table_id         = aws_route_table.public.id
+  destination_cidr_block = "0.0.0.0/0"
+  gateway_id             = var.igw
+}
+
 resource "aws_route_table_association" "private_subnets" {
   for_each       = local.priv_subnet_route_map
   subnet_id      = each.key

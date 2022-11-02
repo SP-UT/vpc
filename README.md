@@ -43,10 +43,11 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_eip"></a> [eip](#module\_eip) | ./modules/eip/ | n/a |
-| <a name="module_igw"></a> [igw](#module\_igw) | ./modules/igw/ | n/a |
-| <a name="module_nat"></a> [nat](#module\_nat) | ./modules/nat/ | n/a |
-| <a name="module_vpc"></a> [vpc](#module\_vpc) | ./modules/vpc/ | n/a |
+| <a name="module_eip"></a> [eip](#module\_eip) | ./modules/eip | n/a |
+| <a name="module_igw"></a> [igw](#module\_igw) | ./modules/igw | n/a |
+| <a name="module_nat"></a> [nat](#module\_nat) | ./modules/nat | n/a |
+| <a name="module_routes"></a> [routes](#module\_routes) | ./modules/routes | n/a |
+| <a name="module_vpc"></a> [vpc](#module\_vpc) | ./modules/vpc | n/a |
 
 ## Resources
 
@@ -70,6 +71,7 @@ No resources.
 |------|-------------|
 | <a name="output_eip"></a> [eip](#output\_eip) | Elastic IP address information |
 | <a name="output_eip_map"></a> [eip\_map](#output\_eip\_map) | Elastic IP address information with subnet mapping |
+| <a name="output_igw"></a> [igw](#output\_igw) | Internet Gateway Information. |
 | <a name="output_nat_gw"></a> [nat\_gw](#output\_nat\_gw) | NAT Gateway information with the Subnet and EIP allocation ID. |
 | <a name="output_private_route_tables"></a> [private\_route\_tables](#output\_private\_route\_tables) | Private Route Table IDs. |
 | <a name="output_private_subnet_ids"></a> [private\_subnet\_ids](#output\_private\_subnet\_ids) | Map of Private Subnet and associated subnet id created.`private_subnet_ids = {"Web or Data Subnet 1" = { "subnet_id" = "subnet-xxxxxxx"}` |
