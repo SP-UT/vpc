@@ -37,5 +37,8 @@ module "routes" {
   private_subnet_ids = module.vpc.private_subnet_ids
   public_subnet_ids  = module.vpc.public_subnet_ids
   igw                = module.igw.igw[join("-", [var.vpc_name, "IGW"])]
+  route_az1_map      = module.vpc.route_az1_map
+  route_az2_map      = module.vpc.route_az2_map
+  route_az3_map      = module.vpc.route_az3_map
   depends_on         = [module.igw, module.eip, module.nat]
 }

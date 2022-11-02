@@ -12,3 +12,6 @@ output "private_route_tables" {
 output "public_route" {
   value = aws_route.public_routes.id
 }
+output "nat1" {
+  value = values(var.route_az2_map)
+}

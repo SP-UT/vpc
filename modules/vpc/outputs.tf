@@ -21,3 +21,15 @@ output "subnets" {
   }
   description = "CIDR information associated with each subnet."
 }
+output "route_az1_map" {
+  value       = local.route_az1_map
+  description = "Route Mapping for Availability Zone 1 (Required by routes module)"
+}
+output "route_az2_map" {
+  value       = local.route_az2_map
+  description = "Route Mapping for Availability Zone 2 (Required by routes module)"
+}
+output "route_az3_map" {
+  value       = local.route_az3_map
+  description = "Route Mapping for Availability Zone 3 (Required by routes module)"
+}

@@ -18,3 +18,15 @@ variable "igw" {
   type        = string
   description = "Internet Gaetway ID."
 }
+variable "route_az1_map" {
+  type        = map(any)
+  description = "Private Subnets and Public Subnet Mapping for Availability Zone 1."
+}
+variable "route_az2_map" {
+  type        = map(any)
+  description = "Private Subnets and Public Subnet Mapping for Availability Zone 2."
+}
+variable "route_az3_map" {
+  type        = map(any)
+  description = "Private Subnets and Public Subnet Mapping for Availability Zone 3."
+}
