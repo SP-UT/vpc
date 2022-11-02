@@ -26,10 +26,6 @@ output "private_route_tables" {
   value       = module.routes.private_route_tables
   description = "Private Route Table IDs."
 }
-output "priv_subnet_route_map" {
-  value       = module.routes.priv_subnet_route_map
-  description = "Private Route Map."
-}
 output "eip" {
   value       = module.eip.eip
   description = "Elastic IP address information"
