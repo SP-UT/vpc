@@ -9,6 +9,6 @@ output "private_route_tables" {
   }
   description = "Private Route Table IDs."
 }
-output "priv_subnet_route_map" {
-  value = local.priv_subnet_route_map
+output "public_route" {
+  value = aws_route.public_routes.id
 }

@@ -26,6 +26,11 @@ output "private_route_tables" {
   value       = module.routes.private_route_tables
   description = "Private Route Table IDs."
 }
+output "public_route" {
+  value       = module.routes.public_route
+  description = "Public Route ID - Traffic to Internet Gateway"
+}
+
 output "eip" {
   value       = module.eip.eip
   description = "Elastic IP address information"
