@@ -48,9 +48,9 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_public_route"></a> [public\_route](#output\_public\_route) | output "private\_route\_tables" { value = { for val in aws\_route\_table.private : val.tags.Name => val.id } description = "Private Route Table IDs." } |
+| <a name="output_public_route"></a> [public\_route](#output\_public\_route) | Public Route ID - sending traffic to Internet Gateway |
 | <a name="output_public_route_table"></a> [public\_route\_table](#output\_public\_route\_table) | Public Route Table ID. |
-| <a name="output_route_table_az1"></a> [route\_table\_az1](#output\_route\_table\_az1) | n/a |
-| <a name="output_route_table_az2"></a> [route\_table\_az2](#output\_route\_table\_az2) | n/a |
-| <a name="output_route_table_az3"></a> [route\_table\_az3](#output\_route\_table\_az3) | n/a |
+| <a name="output_route_table_az1"></a> [route\_table\_az1](#output\_route\_table\_az1) | Private Route Table ID - AZ1 |
+| <a name="output_route_table_az2"></a> [route\_table\_az2](#output\_route\_table\_az2) | Private Route Table ID - AZ2 |
+| <a name="output_route_table_az3"></a> [route\_table\_az3](#output\_route\_table\_az3) | Private Route Table ID - AZ3 |
 <!-- END_TF_DOCS -->
