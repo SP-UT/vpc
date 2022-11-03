@@ -27,6 +27,82 @@ https://terraform-docs.io/user-guide/installation/
 ```
 terraform-docs .
 ```
+## Module Information / Usage 
+This module creates 3 Public facing subnets and multiple triads of private subnets as long as the VPC CIDR can accomodate the address space.
+
+Please take a look at  `values.hcl` for more information about module setup and usage.
+
+The module uses [cidrsubnets](https://developer.hashicorp.com/terraform/language/functions/cidrsubnets) function to calculate subnets CIDRs. So please refer to that documentation in setting up `new_bits` for each subnet.
+
+We can add more private subnets using this VPC module as long as the VPC CIDR can accomodate that in the address space.
+
+Below example can be referred to add more private subnets.
+
+Adding Bastion Subnets
+```
+subnets = [
+            {
+                name = "Public Subnet 1"
+                new_bits = 4
+                az = "a"
+            },
+            {
+                name = "Public Subnet 2"
+                new_bits = 4
+                az = "b"
+            },
+            {
+                name = "Public Subnet 3"
+                new_bits = 4
+                az = "c"
+            },
+            {
+                name = "Web Subnet 1"
+                new_bits = 4
+                az = "a"
+            },
+            {
+                name = "Web Subnet 2"
+                new_bits = 4
+                az = "b"
+            },
+            {
+                name = "Web Subnet 3"
+                new_bits = 4
+                az = "c"
+            },
+            {
+                name = "Data Subnet 1"
+                new_bits = 4
+                az = "a"
+            },
+            {
+                name = "Data Subnet 2"
+                new_bits = 4
+                az = "b"
+            },
+            {
+                name = "Data Subnet 3"
+                new_bits = 4
+                az = "c"
+            },
+                        {
+                name = "Bastion Subnet 1"
+                new_bits = 4
+                az = "a"
+            },
+            {
+                name = "Bastion Subnet 2"
+                new_bits = 4
+                az = "b"
+            },
+            {
+                name = "Bastion Subnet 3"
+                new_bits = 4
+                az = "c"
+            }
+        ]
+```
 
 <!-- BEGIN_TF_DOCS -->
 # Module Documentation
