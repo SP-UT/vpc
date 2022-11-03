@@ -39,6 +39,9 @@ No modules.
 |------|-------------|
 | <a name="output_private_subnet_ids"></a> [private\_subnet\_ids](#output\_private\_subnet\_ids) | Map of Private Subnet and associated subnet id created.`private_subnet_ids = {"Web or Data Subnet 1" = { "subnet_id" = "subnet-xxxxxxx"}` |
 | <a name="output_public_subnet_ids"></a> [public\_subnet\_ids](#output\_public\_subnet\_ids) | Map of Public Subnet and associated subnet id created.`public_subnet_ids = {"Public Subnet 1" = { "subnet_id" = "subnet-xxxxxxx"}` |
+| <a name="output_route_az1_map"></a> [route\_az1\_map](#output\_route\_az1\_map) | Route Mapping for Availability Zone 1 (Required by routes module) |
+| <a name="output_route_az2_map"></a> [route\_az2\_map](#output\_route\_az2\_map) | Route Mapping for Availability Zone 2 (Required by routes module) |
+| <a name="output_route_az3_map"></a> [route\_az3\_map](#output\_route\_az3\_map) | Route Mapping for Availability Zone 3 (Required by routes module) |
 | <a name="output_subnets"></a> [subnets](#output\_subnets) | CIDR information associated with each subnet. |
 | <a name="output_vpc_arn"></a> [vpc\_arn](#output\_vpc\_arn) | Amazon Resource Name (ARN) of VPC |
 | <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | The ID of the VPC |

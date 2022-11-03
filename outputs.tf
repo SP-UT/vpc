@@ -22,15 +22,22 @@ output "public_route_table" {
   value       = module.routes.public_route_table
   description = "Public Route Table ID."
 }
-output "private_route_tables" {
-  value       = module.routes.private_route_tables
-  description = "Private Route Table IDs."
-}
 output "public_route" {
   value       = module.routes.public_route
   description = "Public Route ID - Traffic to Internet Gateway"
 }
-
+output "route_table_az1" {
+  value       = module.routes.route_table_az1
+  description = "Private Route Table ID - AZ1"
+}
+output "route_table_az2" {
+  value       = module.routes.route_table_az2
+  description = "Private Route Table ID - AZ2"
+}
+output "route_table_az3" {
+  value       = module.routes.route_table_az3
+  description = "Private Route Table ID - AZ3"
+}
 output "eip" {
   value       = module.eip.eip
   description = "Elastic IP address information"
@@ -46,7 +53,4 @@ output "nat_gw" {
 output "igw" {
   value       = module.igw.igw
   description = "Internet Gateway Information."
-}
-output "nat1" {
-  value = module.routes.nat1
 }

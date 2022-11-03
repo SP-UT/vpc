@@ -74,14 +74,13 @@ No resources.
 | <a name="output_eip_map"></a> [eip\_map](#output\_eip\_map) | Elastic IP address information with subnet mapping |
 | <a name="output_igw"></a> [igw](#output\_igw) | Internet Gateway Information. |
 | <a name="output_nat_gw"></a> [nat\_gw](#output\_nat\_gw) | NAT Gateway information with the Subnet and EIP allocation ID. |
-| <a name="output_private_route_tables"></a> [private\_route\_tables](#output\_private\_route\_tables) | Private Route Table IDs. |
 | <a name="output_private_subnet_ids"></a> [private\_subnet\_ids](#output\_private\_subnet\_ids) | Map of Private Subnet and associated subnet id created.`private_subnet_ids = {"Web or Data Subnet 1" = { "subnet_id" = "subnet-xxxxxxx"}` |
 | <a name="output_public_route"></a> [public\_route](#output\_public\_route) | Public Route ID - Traffic to Internet Gateway |
 | <a name="output_public_route_table"></a> [public\_route\_table](#output\_public\_route\_table) | Public Route Table ID. |
 | <a name="output_public_subnet_ids"></a> [public\_subnet\_ids](#output\_public\_subnet\_ids) | Map of Public Subnet and associated subnet id created.`public_subnet_ids = {"Public Subnet 1" = { "subnet_id" = "subnet-xxxxxxx"}` |
-| <a name="output_route_az1_map"></a> [route\_az1\_map](#output\_route\_az1\_map) | n/a |
-| <a name="output_route_az2_map"></a> [route\_az2\_map](#output\_route\_az2\_map) | n/a |
-| <a name="output_route_az3_map"></a> [route\_az3\_map](#output\_route\_az3\_map) | n/a |
+| <a name="output_route_table_az1"></a> [route\_table\_az1](#output\_route\_table\_az1) | Private Route Table ID - AZ1 |
+| <a name="output_route_table_az2"></a> [route\_table\_az2](#output\_route\_table\_az2) | Private Route Table ID - AZ2 |
+| <a name="output_route_table_az3"></a> [route\_table\_az3](#output\_route\_table\_az3) | Private Route Table ID - AZ3 |
 | <a name="output_subnets"></a> [subnets](#output\_subnets) | CIDR information associated with each subnet. |
 | <a name="output_vpc_arn"></a> [vpc\_arn](#output\_vpc\_arn) | Amazon Resource Name (ARN) of VPC |
 | <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | The ID of the VPC |
