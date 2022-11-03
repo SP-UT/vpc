@@ -37,8 +37,6 @@ The module uses [cidrsubnets](https://developer.hashicorp.com/terraform/language
 We can add more private subnets using this VPC module as long as the VPC CIDR can accomodate that in the address space.
 
 Below example can be referred to add more private subnets.
-
-Adding Bastion Subnets
 ```
 subnets = [
             {
