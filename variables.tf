@@ -8,6 +8,7 @@ variable "region" {
 }
 variable "vpc_name" {
   type        = string
+  default     = "IaC VPC"
   description = "VPC Name"
 }
 variable "enable_dns_support" {
