@@ -34,9 +34,7 @@ Please take a look at  `values.hcl` for more information about module setup and 
 
 The module uses [cidrsubnets](https://developer.hashicorp.com/terraform/language/functions/cidrsubnets) function to calculate subnets CIDRs. So please refer to that documentation in setting up `new_bits` for each subnet.
 
-We can add more private subnets using this VPC module as long as the VPC CIDR can accomodate that in the address space.
-
-Below example can be referred to add more private subnets.
+We can add more private subnets using this VPC module as shown in the below example.
 ```
 subnets = [
             {
